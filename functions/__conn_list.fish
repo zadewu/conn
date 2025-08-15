@@ -30,7 +30,7 @@ function __conn_list -d "List servers in $CONN_DATA"
     else
         while read -l line
             set -l fields (string split '|' $line)
-            printf "%-20s\n" $fields[1]
+            printf "%s\n" $fields[1]
         end < $CONN_DATA
     end
 end
